@@ -6,7 +6,7 @@ Submit this form to join the API waitlist:
 https://share.hsforms.com/1Lfc7WtPLRk2ppXhPjcYY-A4sk30
 
 ## All Instructions:
-OpenAICodex/PongGameEnglishInstructions
+(OpenAICodex/PongGameEnglishInstructions)
 
 ## All Code:
 
