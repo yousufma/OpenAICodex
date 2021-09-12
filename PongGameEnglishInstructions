@@ -1,22 +1,21 @@
-/* Make a black circle */
+Make a black circle
 
-/* Make it smaller */
+Make it smaller
 
-/* Position the circle absolutely anywhere */
+Position the circle absolutely anywhere
 
-/* Animate the circle to move both horizontally and vertically forever */
+Animate the circle to move both horizontally and vertically forever
 
-/* Create a rectangle at the bottom of the page horizontally centered */
+Create a rectangle at the bottom of the page horizontally centered
 
-/* When I press the left arrow key, move the rectangle to the left. */
+When I press the left arrow key, move the rectangle to the left.
 
-/* if the rectangle and the circle overlap, make the circle go in the opposite direction. */
+if the rectangle and the circle overlap, make the circle go in the opposite direction.
 
-/* Now track a score. Display the current score in the top left with the label: Score: . */
+Now track a score. Display the current score in the top left with the label: Score: .
 
-/* make the score label larger */
+make the score label larger
 
-/* increment the score by 1 every second. */
+increment the score by 1 every second.
 
-/* if the circle touches the bottom of the page, decrease the score by 10 and show a label underneath the scoreLabel that says Points lost! hide the label one second after it appears. */
-
+if the circle touches the bottom of the page, decrease the score by 10 and show a label underneath the scoreLabel that says Points lost! hide the label one second after it appears.
