@@ -1,0 +1,94 @@
+var circle = document.createElement('div');
+circle.style.borderRadius = '50%';
+circle.style.width = '50px';
+circle.style.height = '50px';
+circle.style.backgroundColor = 'black';
+document.body.appendChild(circle);
+
+circle.style.position = 'absolute';
+circle.style.left = '100px';
+circle.style.top = '100px';
+ 
+var x = 0;
+var y = 0;
+var xSpeed = 5;
+var ySpeed = 5;
+setInterval(function() {
+  x += xSpeed;
+  y += ySpeed;
+  circle.style.left = x + 'px';
+  circle.style.top = y + 'px';
+  if (x > document.body.clientWidth - 50) {
+    xSpeed = -5;
+  }
+  if (x < 0) {
+    xSpeed = 5;
+  }
+  if (y > document.body.clientHeight - 50) {
+    ySpeed = -5;
+  }
+  if (y < 0) {
+    ySpeed = 5;
+  }
+}, 20);
+ 
+
+var rect = document.createElement('div');
+rect.style.width = '100px';
+rect.style.height = '30px';
+rect.style.backgroundColor = 'red';
+rect.style.position = 'absolute';
+rect.style.left = (document.body.clientWidth - 100) / 2 + 'px';
+rect.style.bottom = '0px';
+document.body.appendChild(rect);
+ 
+document.onkeydown = function(e) {
+  if (e.keyCode == 37) {
+    rect.style.left = (parseInt(rect.style.left) - 30) + 'px';
+  }
+  if (e.keyCode == 39) {
+    rect.style.left = (parseInt(rect.style.left) + 30) + 'px';
+  }
+};
+ 
+setInterval(function() {
+  if (circle.getBoundingClientRect().left < rect.getBoundingClientRect().right &&
+      circle.getBoundingClientRect().right > rect.getBoundingClientRect().left &&
+      circle.getBoundingClientRect().top < rect.getBoundingClientRect().bottom &&
+      circle.getBoundingClientRect().bottom > rect.getBoundingClientRect().top) {
+    xSpeed = xSpeed;
+    ySpeed = -ySpeed;
+  }
+}, 20);
+
+var score = 0;
+var scoreLabel = document.createElement('div');
+scoreLabel.innerHTML = 'Score: ' + score;
+scoreLabel.style.position = 'absolute';
+scoreLabel.style.left = '0px';
+scoreLabel.style.top = '0px';
+scoreLabel.style.fontSize = '30px';
+document.body.appendChild(scoreLabel);
+ 
+setInterval(function() {
+  score++;
+  scoreLabel.innerHTML = 'Score: ' + score;
+}, 1000);
+ 
+ setInterval(function() {
+  if (circle.getBoundingClientRect().bottom > document.body.clientHeight) {
+    score -= 5;
+    scoreLabel.innerHTML = 'Score: ' + score;
+    var pointsLost = document.createElement('div');
+    pointsLost.innerHTML = '5 Points lost!';
+    pointsLost.style.position = 'absolute';
+    pointsLost.style.left = '0px';
+    pointsLost.style.top = '50px';
+    pointsLost.style.fontSize = '30px';
+    pointsLost.style.backgroundColor = 'red';
+    document.body.appendChild(pointsLost);
+    setTimeout(function() {
+      document.body.removeChild(pointsLost);
+    }, 1000);
+  }
+}, 20);
