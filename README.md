@@ -9,4 +9,7 @@ https://share.hsforms.com/1Lfc7WtPLRk2ppXhPjcYY-A4sk30
 [English instructions](/PongGameEnglishInstructions)
 
 ## All Code:
+[JavaScript code](/PongGameCode)
 
+## Speech to text extension:
+https://dictanote.co/voicein/
